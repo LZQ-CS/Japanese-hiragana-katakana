@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #e74c3c;
+  --text-color: #ecf0f1;
+  --border-color: #7f8c8d;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.kana-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.header {
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.kana-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.kana-cell:hover {
+  transform: scale(1.05);
+}
+
+.kana {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.romaji {
+  font-size: 0.9rem;
+  color: var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .kana-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .kana {
+    font-size: 1.5rem;
+  }
+}
